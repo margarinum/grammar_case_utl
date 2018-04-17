@@ -35,6 +35,7 @@ for line in file_open:
 
     #Небольшой костыль для вывода именительного падежа
     total_string = '1|'+name_court+'|'+id_court
+    res_file.write(total_string)
 
     # Пример вызова сервиса = 'https://ws3.morpher.ru/russian/declension?s=Соединенное%20королевство'
     # Перед вызовом строки заменим пробелы на разделитель, с которым работает сервис = '%20'
@@ -88,7 +89,7 @@ for line in file_open:
             if total_string == '||'+id_court:
                 total_string=''
             print(total_string)
-            #res_file.write(total_string)
+            res_file.write(total_string)
 file_open.close()
 res_file.close()
 
