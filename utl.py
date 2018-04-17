@@ -92,4 +92,3 @@ for line in file_open:
             res_file.write(total_string)
 file_open.close()
 res_file.close()
-
