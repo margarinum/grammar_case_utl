@@ -34,7 +34,7 @@ for line in file_open:
     #name_court = name_court.replace('\n', '')
 
     #Небольшой костыль для вывода именительного падежа
-    total_string = '1|'+name_court+'|'+id_court
+    total_string = '1|'+name_court+'|'+id_court+'\n'
     res_file.write(total_string)
 
     # Пример вызова сервиса = 'https://ws3.morpher.ru/russian/declension?s=Соединенное%20королевство'
@@ -84,7 +84,7 @@ for line in file_open:
         # Собираем строку
             court = str(child.text)
             court = court.rstrip()
-            total_string = grm_type + '|' + court+'|'+id_court
+            total_string = grm_type + '|' + court+'|'+id_court+'\n'
             #Еще один костыль, дабы не выводить неинформативные строки
             if total_string == '||'+id_court:
                 total_string=''
