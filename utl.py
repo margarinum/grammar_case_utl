@@ -86,7 +86,7 @@ for line in file_open:
             court = court.rstrip()
             total_string = grm_type + '|' + court+'|'+id_court+'\n'
             #Еще один костыль, дабы не выводить неинформативные строки
-            if total_string == '||'+id_court:
+            if total_string == '||'+id_court+'\n':
                 total_string=''
             print(total_string)
             res_file.write(total_string)
